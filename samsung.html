@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Spartan',sans-serif;
+  justify-content: center;
+  align-items: center;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+ p {
+    font-size: 16px;
+
+    margin: 15px 0 20px 0;
+ }
+ .section-m1{
+    margin: 40px 0;
+ }
+ .section-p1{
+    padding: 40px 80px;
+ }
+ h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+
+ }
+ h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+ }
+ h4{
+    font-size: 20px;
+    color: #222;
+ }
+ h6 {
+    font-weight: 700;
+    font-size: 12px;
+ }
+  #Product{
+    text-align: center;
+
+  }
+  #Produce h2{
+    text-align:left;
+    right:10px;
+  }
+  #Product .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top:20px;
+    flex-wrap: wrap;
+  }
+  #Product .pro{
+    width: 17%;
+    min-width: 100px;
+    padding:10px 12px;
+    border: 1px solid #cce7d0;
+    box-shadow: 10px 10px  20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin: 15px 0;
+    transition: 0.2s ease;
+ position: relative;
+    height: 17%;
+  }
+  #Product .pro:hover{
+    box-shadow: 15px 15px  22px rgba(0, 0, 0, 0.6);
+  }
+  #Product .pro img{
+    border-radius: 5px;
+    width:100%;
+  }
+  #Product .pro .star{
+    color: gold;
+
+  }
+  #Product .pro .des {
+    text-align: start;
+    padding:7px 0;
+  }
+
+  #Product .pro .des span{
+    color: #606063;
+    font-size: 12px;
+  }
+  #Product .pro .des h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size:15px;
+  }
+  #Product .pro .des i{
+    font-size: 12px;
+    align-items: start;
+  }
+  #Product .pro .des h4{
+    padding-top: 2px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #9b9fa1d7;
+  }
+  #Product .pro .cart{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #088178;
+  border: 1px solid #cce7d0;
+   position: absolute;
+  right: 10px;
+  bottom: 20px;
+
+  
+
+
+
+  }
+  #Product .pro .cart:hover{
+    color: #088108;
+  }
+  #Product .Section-p1{
+    font-size:20px;
+  }
+#banner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+#banner button{
+    width: 25%;
+    left:30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+   
+}
+footer h4{
+    font-size: 17px;
+    padding-bottom: 20px;
+}
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color:#88fd9c;
+    margin-bottom:10px;
+}
+footer .col a{
+    color: black;
+    font-family: "Courier New", Courier, monospace;
+}
+footer .install .row img{
+    /* border: 1px solid #088178; */
+    border-radius: 6px;
+   
+    cursor: pointer;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+footer .follow i{
+    /* margin-top: 10px; */
+    color: #465b52;
+    cursor: pointer;
+}
+footer .follow i:hover,
+footer a:hover{
+    /* margin-top: 10px; */
+    color: #088178;
+  
+}
+footer .copyright{
+    width: 100%;
+    text-align:center;
+}
+</style>
+</head>
+<body>
+    
+<header>
+    <h1>hello</h1>
+</header>
+<section id="Product" class="Section-p1">
+    <h2>Samsung</h2>
+    <!-- <p>new features</p> -->
+    <div class="pro-container">
+        <div class="pro" onclick="window.location.href='cc.html'">
+            <img src="ff.avif" alt="#">
+            <div class="des">
+                <span>Samsung</span>
+                <h5>Samsung S23 Ultra 5G</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+        
+                </div>
+                <h4>$799</h4>
+            </div>
+            <a href=""><button class="cart">hh</button></a>
+        
+        </div>
+        <div class="pro" onclick="window.location.href='cc.html'">
+            <img src="ff.avif" alt="#">
+            <div class="des">
+                <span>Samsung</span>
+                <h5>Samsung S23 Ultra 5G</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+        
+                </div>
+                <h4>$799</h4>
+            </div>
+            <i class="fa-solid fa-cart-plus cart"></i>
+        </div>
+        <div class="pro" onclick="window.location.href='cc.html'">
+            <img src="ff.avif" alt="#">
+            <div class="des">
+                <span>Samsung</span>
+                <h5>Samsung S23 Ultra 5G</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+        
+                </div>
+                <h4>$799</h4>
+            </div>
+          
+            <i class="fa-solid fa-cart-shopping cart"></i>
+        </div>
+        <div class="pro" onclick="window.location.href='cc.html'">
+            <img src="ff.avif" alt="#">
+            <div class="des">
+                <span>Samsung</span>
+                <h5>Samsung S23 Ultra 5G</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+        
+                </div>
+                <h4>$799</h4>
+            </div>
+            <i class="fa-solid fa-cart-plus cart"></i>
+        </div>
+        <div class="pro" onclick="window.location.href='cc.html'">
+            <img src="ff.avif" alt="#">
+            <div class="des">
+                <span>Samsung</span>
+                <h5>Samsung S23 Ultra 5G</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+        
+                </div>
+                <h4>$799</h4>
+            </div>
+            <i class="fa-solid fa-cart-plus cart"></i>
+        </div>
+        <div class="pro" onclick="window.location.href='cc.html'">
+            <img src="ff.avif" alt="#">
+            <div class="des">
+                <span>Samsung</span>
+                <h5>Samsung S23 Ultra 5G</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+        
+                </div>
+                <h4>$799</h4>
+            </div>
+            <i class="fa-solid fa-cart-plus cart"></i>
+        </div>
+        <div class="pro" onclick="window.location.href='cc.html'">
+            <img src="ff.avif" alt="#">
+            <div class="des">
+                <span>Samsung</span>
+                <h5>Samsung S23 Ultra 5G</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+        
+                </div>
+                <h4>$799</h4>
+            </div>
+            <i class="fa-solid fa-cart-plus cart"></i>
+        </div>
+        <div class="pro" onclick="window.location.href='cc.html'">
+            <img src="ff.avif" alt="#">
+            <div class="des">
+                <span>Samsung</span>
+                <h5>Samsung S23 Ultra 5G</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+        
+                </div>
+                <h4>$799</h4>
+            </div>
+            <i class="fa-solid fa-cart-plus cart"></i>
+        </div>
+        <div class="pro" onclick="window.location.href='cc.html'">
+            <img src="ff.avif" alt="#">
+            <div class="des">
+                <span>Samsung</span>
+                <h5>Samsung S23 Ultra 5G</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+        
+                </div>
+                <h4>$799</h4>
+            </div>
+            <i class="fa-solid fa-cart-plus cart"></i>
+        </div>
+        <div class="pro" onclick="window.location.href='cc.html'">
+            <img src="ff.avif" alt="#">
+            <div class="des">
+                <span>Samsung</span>
+                <h5>Samsung S23 Ultra 5G</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+        
+                </div>
+                <h4>$799</h4>
+            </div>
+            <i class="fa-solid fa-cart-plus cart"></i>
+        </div>
+    </div>
+</section>
+<footer class="section-p1">
+    <div class="col">
+        <img  class="logo"src="mastercard.png" alt="" height=" 40px" width="40px">
+        <h4>
+            Contact
+        </h4>
+        <p><strong>Address:</strong>xxxxxxxxxxxxxxxx</p>
+        <p><strong>Phone:</strong>xxxxxxxxxxxxx</p>
+        <p><strong>Email:</strong>xxxxxx</p>
+        <div class="follow">
+            <h4>Follow us on</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Terms & Condition</a>
+        <a href="#">Policys</a>
+        <a href="#">Information</a>
+        <a href="#">Contact Us</a>
+
+    </div>
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign in</a>
+        <a href="#">View cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Contact Us</a>
+
+    </div>
+    <div class="col install">
+        <h4>Install Apps</h4>
+       <p>From App store or Google Play store</p>
+       <div class="row">
+            <img src="appstore.jpg" alt="#" height=" 110px" >
+       <p>From App store or Google Play store</p>
+       <img src="mastercard.png" alt="#" height="75px" width="160px">
+       </div>
+
+    </div>
+   
+    <div class="copyright">
+        <p>@ 2021,All rights reserve</p>
+    </div>
+    </footer>
+</body>
