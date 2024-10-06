@@ -717,7 +717,7 @@ input[type="text"] {
       <h1>Similar Products!</h1>
         <div class="pro-container">
         <?php
-            $conn = mysqli_connect("localhost","root","","chetanlogin")or die(mysqli_error());
+            $conn = mysqli_connect("localhost","root","1234","chetanlogin")or die(mysqli_error());
             $name="samsung";
         $display = mysqli_query($conn, "SELECT * FROM `shopnow` WHERE `name` LIKE '%$name%'");
         $no =1;
@@ -758,8 +758,7 @@ $no =$no+1;
       <div id="section4"></div>
    <footer class="section-p1">
     <div class="col">
-        <img  class="logo"src="img/mastercard.png" alt="" height=" 40px" width="40px">
-        <h4>
+    <img  class="logo"src="img/smart_galaxy.png" alt="" height=" 70px" width="200px">        <h4>
             Contact
         </h4>
         <p><strong>Address:</strong>xxxxxxxxxxxxxxxx</p>

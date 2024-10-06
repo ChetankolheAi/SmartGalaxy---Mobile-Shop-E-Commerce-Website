@@ -1,9 +1,9 @@
 <?php
 session_start();
 include ("demo.php");
-$conn1 = mysqli_connect("localhost","root","","user_cart")or die(mysqli_error());
+$conn1 = mysqli_connect("localhost","root","1234","user_cart")or die(mysqli_error());
 // $user_pass = "okkop";
-
+$user_pass='ok12121';
 if(isset($_SESSION['userpass'])){
    $user_pass=$_SESSION['userpass'];
 }
@@ -58,7 +58,7 @@ if (isset($_GET['data'])){
 //    echo "there is some error problem";
 //   }
 
-$conn1 = mysqli_connect("localhost","root","","user_cart")or die(mysqli_error());
+$conn1 = mysqli_connect("localhost","root","1234","user_cart")or die(mysqli_error());
 // $user_pass=$_GET['userpass'];
 
 $display_product = mysqli_query($conn, "SELECT * FROM `shopnow` WHERE `id`='$itemid'");

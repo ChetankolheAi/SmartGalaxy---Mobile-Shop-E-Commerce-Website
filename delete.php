@@ -1,6 +1,6 @@
 <?php
 include('demo.php');
-$conn1 = mysqli_connect("localhost","root","","user_cart")or die(mysqli_error());
+$conn1 = mysqli_connect("localhost","root","1234","user_cart")or die(mysqli_error());
 if(isset($_GET['delete'])&&isset($_GET['m'])){
     $delete_id=$_GET['delete'];
     

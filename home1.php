@@ -420,7 +420,7 @@ h4 {
             <!-- <p>new features</p> -->
             <div class="pro-container">
             <?php
-            $conn = mysqli_connect("localhost","root","","chetanlogin")or die(mysqli_error());
+            $conn = mysqli_connect("localhost","root","1234","chetanlogin")or die(mysqli_error());
 
   
             
@@ -476,7 +476,7 @@ $no =$no+1;
         <!-- <h5>New innovation nd launch just for you</h5> -->
         <div class="pro-container">
         <?php
-            $conn = mysqli_connect("localhost","root","","chetanlogin")or die(mysqli_error());
+            $conn = mysqli_connect("localhost","root","1234","chetanlogin")or die(mysqli_error());
             $name="samsung";
         $display = mysqli_query($conn, "SELECT * FROM `shopnow` WHERE `name` LIKE '%$name%'");
         $no =1;

@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost","root","","chetanlogin")or die(mysqli_error());
+$conn = mysqli_connect("localhost","root","1234","chetanlogin")or die(mysqli_error());
 // if(isset($_POST['add_product']))
 // {
 //         // $id = $_POST['id'];

@@ -365,7 +365,7 @@ h4 {
             <tbody>
 
             <?php
-            $conn1 = mysqli_connect("localhost","root","","user_cart")or die(mysqli_error());
+            $conn1 = mysqli_connect("localhost","root","1234","user_cart")or die(mysqli_error());
             if(isset($_SESSION['userpass'])){
                 $user_pass=$_SESSION['userpass'];
         $display_product=mysqli_query($conn1, "select * from `$user_pass`");
@@ -451,8 +451,7 @@ h4 {
 
     <footer class="section-p1">
     <div class="col">
-        <img  class="logo"src="img/mastercard.png" alt="" height=" 40px" width="40px">
-        <h4>
+    <img  class="logo"src="img/smart_galaxy.png" alt="" height=" 70px" width="200px">        <h4>
             Contact
         </h4>
         <p><strong>Address:</strong>xxxxxxxxxxxxxxxx</p>

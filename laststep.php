@@ -22,7 +22,7 @@ $display_product = mysqli_query($conn, "SELECT * FROM `login` WHERE `username`='
 if(mysqli_num_rows($display_product)>0){
 
     while($row = mysqli_fetch_assoc($display_product)){
-      $coustomer_id = $row['coustumer_id'];
+      $coustomer_id = $row['id'];
     }
 
 }

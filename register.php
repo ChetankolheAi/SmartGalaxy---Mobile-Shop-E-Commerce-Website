@@ -1,7 +1,7 @@
 <?php
 session_start();
 include ("demo.php");
-$conn1 = mysqli_connect("localhost","root","","user_cart")or die(mysqli_error());
+$conn1 = mysqli_connect("localhost","root","1234","user_cart")or die(mysqli_error());
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
    

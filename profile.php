@@ -22,6 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     
     if(isset($_POST['New_address'])){
         $new_address = $_POST['New_address'];
+        $conn = mysqli_connect("localhost","root","1234","chetanlogin")or die(mysqli_error());
         $query="UPDATE `login` SET `address`='$new_address' where username='$username'";
         $result= mysqli_query($conn,$query);
         if($result){
@@ -594,7 +595,7 @@ h4 {
                             <h4><i class="fa-solid fa-location-dot"></i> Deliver to this Address</h4>
                         </div>
                         <?php
-            $conn = mysqli_connect("localhost","root","","chetanlogin")or die(mysqli_error());
+            $conn = mysqli_connect("localhost","root","1234","chetanlogin")or die(mysqli_error());
             if(isset($_SESSION['username'])){
                 $username=$_SESSION['username'];
         
@@ -644,7 +645,7 @@ h4 {
                         <h3>
                             Check Existing Offers Now
                         </h3>
-                        <button>Shop now</button>
+                        <button><a href="shopnow.php">Shop Now</a></button>
 
                     </div>
                     <div class="offers">
@@ -668,7 +669,7 @@ h4 {
 
     <footer class="section-p1">
     <div class="col">
-        <img  class="logo"src="img/mastercard.png" alt="" height=" 40px" width="40px">
+    <img  class="logo"src="img/smart_galaxy.png" alt="" height=" 70px" width="200px">
         <h4>
             Contact
         </h4>
