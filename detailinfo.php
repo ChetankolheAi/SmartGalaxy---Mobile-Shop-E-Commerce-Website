@@ -855,29 +855,6 @@ $no =$no+1;
 
 
         // Create an XMLHttpRequest object
-var xhr = new XMLHttpRequest();
-
-// Define the URL and method
-var url = 'Addtocart.php';
-var method = 'POST';
-
-// Open the connection
-xhr.open(method, url, true);
-
-// Set the request header
-xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-// Send the request
-xhr.send('name=imageName');
-
-// Handle the response
-xhr.onload = function() {
-    if (xhr.status === 200) {
-        console.log(xhr.responseText);
-    } else {
-        console.log('Error: ' + xhr.statusText);
-    }
-};
 
 
 

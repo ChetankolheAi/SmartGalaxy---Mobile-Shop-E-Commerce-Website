@@ -21,6 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         {
             $result2 = mysqli_query($conn, "SELECT * FROM `login` WHERE `username`='$Username'");
             $row_count = mysqli_num_rows($result2);
+            
                 if($row_count>0){
                     echo"<script> alert('Username already present try withanother username')</script>";
                     echo "<script>window.open('register.php','_self')</script>";
@@ -29,31 +30,35 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
                 else{
                         $sql = "CREATE TABLE `$user_pass` (
                             `itemid` INT NOT NULL,
-                            `userpass` VARCHAR(232) NOT NULL,
-                            `name` VARCHAR(232) NOT NULL,
-                            `price` VARCHAR(232) NOT NULL,
-                            `storage` VARCHAR(232) NOT NULL,
-                            `image` VARCHAR(2323) NOT NULL,
-                            `quantity` INT NOT NULL,
+                            `userpass` VARCHAR(232)  NOT NULL,
+                            `name` VARCHAR(232)  NULL,
+                            `price` VARCHAR(232)  NULL,
+                            `storage` VARCHAR(232)  NULL,
+                            `image` VARCHAR(2323) NULL,
+                            `quantity` INT  NULL,
                             PRIMARY KEY (`itemid`)
                         )";
                         $result = mysqli_query($conn1 , $sql);
                   
-                    $query = "INSERT INTO login (firstname, lastname,phonenumber,email,address,pincode,username,passward,confirmpassward) VALUES ('$firstname', '$lastname','$phonenumber','$email','$address','$pincode','$Username','$passward', '$confirmpassward')";
-                    $result1=mysqli_query($conn, $query);
+                        if(!empty($Username) && !empty($passward) && !empty($confirmpassward) && ($passward == $confirmpassward))
+                        {
+                            $query = "INSERT INTO login (firstname, lastname,Username,email, address, pincode,passward, confirmpassward) VALUES ('$firstname', '$lastname','$Username','$email', '$address', '$pincode', '$passward', '$confirmpassward')";
+                            $result1=mysqli_query($conn, $query);
+                            
 
-                    if($result&&$result1){
-                        $_SESSION['username']="$Username";
-                        $_SESSION['userpass']=$Username.$passward;
-                        $_SESSION['pincode']="$pincode";
-                        $_SESSION['address']="$address";
+                        }
+                        if($result1&&$result){
+                            $_SESSION['username']="$Username";
+                            $_SESSION['userpass']=$Username.$passward;
+                            $_SESSION['pincode']="$pincode";
+                            $_SESSION['address']="$address";
 
-                        echo"<script> alert('Successfully Register')</script>";
-                        echo "<script>window.open('home1.php','_self')</script>";
-                    }
-                    else{
-                        echo"<script> alert('Try again')</script>";
-                    }
+                            echo"<script> alert('Successfully Register')</script>";
+                            echo "<script>window.open('home1.php','_self')</script>";
+                        }
+                        else{
+                            echo"<script> alert('Try again')</script>";
+                        }
                
 
                 

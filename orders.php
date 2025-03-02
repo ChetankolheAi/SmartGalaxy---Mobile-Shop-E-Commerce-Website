@@ -335,57 +335,55 @@ h4 {
         <table id="cart-table">
             <thead>
                 <tr>
-                    <td>REMOVE</td>
+                    <td>Sr.no</td>
                     <td>IMAGE</td>
                     <td>PRODUCT</td>
                     <td>PRICE</td>
-                    <td>DELIVERY STATUS</td>
+                    <td>Order-Date</td>
                 </tr>
             </thead>
             <tbody>
+    <?php
+    $srno = 0;
+    $id_result = mysqli_query($conn, "SELECT id FROM `login` WHERE `username`='$username'");
+    $user_data = mysqli_fetch_assoc($id_result);
+    $user_id = $user_data['id'];
 
-            <?php
-             $srno=0;
-            $conn1 = mysqli_connect("localhost","root","1234","user_cart")or die(mysqli_error());
-            
-            if(isset($_SESSION['username'])){
-            $display_product=mysqli_query($conn, "select * from `orders`");
-            $no =1;
-            if(mysqli_num_rows($display_product)>0){
-                
-             while($row = mysqli_fetch_assoc($display_product)){
-                $srno=$srno+1;
-            ?> 
-            
-            <tr class="cart-item">
-            <td>
-                <h4><?php echo $srno ?></h4>
+    // Query to get the user's orders
+    $display_product = mysqli_query($conn, "SELECT * FROM `orders` WHERE `coustumer_id`='$user_id'");
 
-            <!-- <a href="delete.php?deleteorder=<?php echo $row['orderID'];?>" onclick="return confirm('Are you sure you want to delete this product from order list?');"> -->
-        
-            <!-- <i class="fas fa-trash cv"></i>
-    </a> -->
+    if (mysqli_num_rows($display_product) > 0) {
+        while ($row = mysqli_fetch_assoc($display_product)) {
+            $srno++;
 
-</td>
+            // Fetch product details for each item in the order
+            $product = mysqli_query($conn, "SELECT * FROM `shopnow` WHERE `id`='" . $row['itemids'] . "'");
+            $product_data = mysqli_fetch_assoc($product);
 
-                    <!-- <td><img src="img_db/<?php echo $row['itemid']?>" alt=""></td> -->
-                    <td><?php echo $row['itemids']?></td>
-                    <td class="Price"><i class="fa-solid fa-indian-rupee-sign"></i><?php echo $row['Total_bill_price']?></td>
-                    <!-- <td class="subtotal"><i class="fa-solid fa-indian-rupee-sign"></i><?php echo $row['Price']?></td> -->
+            // Check if product data exists
+            if ($product_data) {
+    ?> 
+                <tr class="cart-item">
+                    <td>
+                        <h4><?php echo $srno; ?></h4>
+                    </td>
+                    <td><img src="img_db/<?php echo $product_data['image']; ?>" alt="Product Image" width="70"></td> <!-- Assuming 'image' is the field for product images -->
+                    <td><?php echo $product_data['name']; ?></td>
+                    <td><i class="fa-solid fa-indian-rupee-sign"></i><?php echo $row['Total_bill_price']; ?></td>
+                    <td><?php echo $row['Order_date']; ?></td>
                 </tr>
-<?php
-
-$no =$no+1;
-            }
+    <?php
+            } else {
+                echo "<script>alert('Product not found!');</script>";
             }
         }
-       else{
-        echo"<script> alert('Login or register user to add item in cart')</script>";
-        echo "<script>window.open('home1.php','_self')</script>";
-       }
-        
-             ?>
-            </tbody>
+    } else {
+        echo "<script> alert('No items in the cart. Please add items to your cart.'); </script>";
+        // echo "<script>window.open('home1.php','_self');</script>";
+    }
+    ?>
+</tbody>
+
         </table>
     </section>
 

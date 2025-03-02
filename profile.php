@@ -4,10 +4,12 @@ if(isset($_SESSION['username']) ){
 $username=$_SESSION['username'];
 
 }
-
 else{
     echo "<script>alert('Login to View Profile')</script>";
+    $username="Login First";
 }
+
+
 
 if(isset($_SESSION['pincode'])){
     $pincode=$_SESSION['pincode'];
@@ -550,7 +552,7 @@ h4 {
         else
         {
             ?>
-            <h2>Hey! Login first to view user name</h2>
+            <h2>Hey! Login First </h2>
             <?php
         }
         ?>
@@ -600,6 +602,7 @@ h4 {
                 $username=$_SESSION['username'];
         
             }
+          
         $display = mysqli_query($conn, "SELECT * FROM `login` WHERE `username`= '$username'");
         if(mysqli_num_rows($display)>0){
             

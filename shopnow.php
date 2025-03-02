@@ -425,10 +425,10 @@ h4 {
                             <i class="fa-solid fa-star"></i>
                 
                         </div>
-                        <h4>$799</h4>
+                        <h4><i class="fa-solid fa-indian-rupee-sign"></i><?php echo $row['price']?></h4>
                     </div>
                     <a href="addproduct_to_db.php?itemid= <?php echo $row['id']?>">
-                    <i class="fa-solid fa-cart-plus cart"></i></a>
+                    <a href="addproduct_to_db.php?itemid= <?php echo $row['id']?>"><button class="cart"><i class="fa-solid fa-cart-shopping"></i></button></a>
                 </div>
                 <?php
             }

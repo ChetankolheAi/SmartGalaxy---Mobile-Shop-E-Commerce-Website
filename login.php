@@ -66,6 +66,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     min-height: 100vh;
     background-position: center;
     background-size: 90pc;
+    background-color: rgb(255, 255, 255);
   
   }
   .wrapper {
@@ -79,9 +80,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     font-family: 'Courier New', Courier, monospace;
     z-index: 10;
     align-items: right;
+    background-color: rgb(54, 91, 56);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   .wrapper h1{
     font-size: 36px;
+    color: white;
   }
   .wrapper .input-box  {
     width: 100%;
