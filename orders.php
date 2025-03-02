@@ -1,13 +1,8 @@
 <?php
 session_start();
-$username=$_SESSION['username'];
-$user_pass=$_SESSION['userpass'];
-   
-
-
+$username = $_SESSION['username'];
+$user_pass = $_SESSION['userpass'];
 include ("demo.php");
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +20,6 @@ body{
     font-family: 'Spartan',sans-serif;
   justify-content: center;
   align-items: center;
-
 }
 *{
     margin: 0;
@@ -33,10 +27,8 @@ body{
     box-sizing: border-box;
     font-family: 'Spartan', sans-serif;
 }
-
- p {
+p {
     font-size: 16px;
-
     margin: 15px 0 20px 0;
  }
  .section-m1{
@@ -49,7 +41,6 @@ body{
     font-size: 50px;
     line-height: 64px;
     color: #222;
-
  }
  h2 {
     font-size: 46px;
@@ -72,7 +63,6 @@ body{
     border: 1px solid #044b46;
     border-radius: 05px;
 }
-
 footer{
     display: flex;
     flex-wrap: wrap;
@@ -84,7 +74,6 @@ footer .col{
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 20px;
-   
 }
 footer h4{
     font-size: 17px;
@@ -105,25 +94,19 @@ footer .col a{
     font-family: "Courier New", Courier, monospace;
 }
 footer .install .row img{
-    /* border: 1px solid #088178; */
     border-radius: 6px;
-   
     cursor: pointer;
 }
-
 footer .follow{
     margin-top: 20px;
 }
 footer .follow i{
-    /* margin-top: 10px; */
     color: #465b52;
     cursor: pointer;
 }
 footer .follow i:hover,
 footer a:hover{
-    /* margin-top: 10px; */
     color: #088178;
-  
 }
 footer .copyright{
     width: 100%;
@@ -137,10 +120,8 @@ footer .copyright{
     text-align: center;
     background-color: black;
     height: 160px;
-    
 }
 #banner button{
-    
     left:30px;
     display: flex;
     align-items: center;
@@ -151,7 +132,7 @@ footer .copyright{
     width: 120px;
     height: 40px;
     border-radius: 12px;
-    border-color:#368576; ;
+    border-color:#368576;
 }
 #banner h2{
     color: white;
@@ -162,24 +143,19 @@ footer .copyright{
 #banner h4{
     color: white;
 }
-
  @media (max-width: 650px){
-        
-    }
+}
 #banner{
     margin-top: 60px;
-
-   }
+}
 #cart {
     overflow-x: auto;
-  
 }
 #cart table{
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
     white-space: nowrap;
-
 }
 #cart table img{
     width: 70px;
@@ -187,24 +163,20 @@ footer .copyright{
 #cart table td:nth-child(1){
     width: 100px;
     text-align: center;
-
 }
 #cart table td:nth-child(2){
     width: 150px;
     text-align: center;
-    
 }
 #cart table td:nth-child(3){
     width: 250px;
     text-align: center;
-    
 }
 #cart table td:nth-child(4),
 #cart table td:nth-child(5),
 #cart table td:nth-child(6){
     width: 150px;
     text-align: center;
-    
 }
 #cart table td:nth-child(5) input{
     width: 70px;
@@ -220,19 +192,16 @@ footer .copyright{
     text-transform: uppercase;
     font-size: 13px;
     padding: 18px 0;
-    
 }
 #cart table tbody td{
     font-weight: 100;
     font-size: 13px;
     padding: 18px 0;
-    
 }
 #cart-add{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 #coupon{
     width: 50%;
@@ -248,7 +217,6 @@ footer .copyright{
     width: 60%;
     margin-right: 10px;
     border: 1px solid #e2e9e1;
-
 }
 #coupon button{
     background-color: #088178;
@@ -261,34 +229,29 @@ footer .copyright{
     margin-bottom: 30px;
     border: 1px solid #e2e9e1;
     padding: 30px;
-
 }
 #subtotal table{
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 20px;
-
 }
 #subtotal table td{
     width:50%;
     border: 1px solid #e2e9e1;
-padding: 10px;
-font-size: 13px;
+    padding: 10px;
+    font-size: 13px;
 }
 @media (max-width:799px) {
-    
-        #cart-add {
-
-            flex-direction: column;
-        }
-        #coupon{
-            width: 100%;
-        }
-        #subtotal{
-            width: 100%;
-            padding: 20px;
-        }
-
+    #cart-add {
+        flex-direction: column;
+    }
+    #coupon{
+        width: 100%;
+    }
+    #subtotal{
+        width: 100%;
+        padding: 20px;
+    }
 }
 .cv {
     color: black;
@@ -297,10 +260,10 @@ font-size: 13px;
     color: red;
 }
 @media (max-width: 650px){
-        .section-p1 {
-            padding: 40px 40px ;
-        }
-        h2 {
+    .section-p1 {
+        padding: 40px 40px ;
+    }
+    h2 {
     font-size: 24px;
     line-height: 35px;
     color: #222;
@@ -316,10 +279,8 @@ h4 {
 }
 }
 </style>
-   
 </head>
 <body>
-  
     <header>
     <?php
     include("Navbar.php");
@@ -349,25 +310,21 @@ h4 {
     $user_data = mysqli_fetch_assoc($id_result);
     $user_id = $user_data['id'];
 
-    // Query to get the user's orders
     $display_product = mysqli_query($conn, "SELECT * FROM `orders` WHERE `coustumer_id`='$user_id'");
 
     if (mysqli_num_rows($display_product) > 0) {
         while ($row = mysqli_fetch_assoc($display_product)) {
             $srno++;
-
-            // Fetch product details for each item in the order
             $product = mysqli_query($conn, "SELECT * FROM `shopnow` WHERE `id`='" . $row['itemids'] . "'");
             $product_data = mysqli_fetch_assoc($product);
 
-            // Check if product data exists
             if ($product_data) {
     ?> 
                 <tr class="cart-item">
                     <td>
                         <h4><?php echo $srno; ?></h4>
                     </td>
-                    <td><img src="img_db/<?php echo $product_data['image']; ?>" alt="Product Image" width="70"></td> <!-- Assuming 'image' is the field for product images -->
+                    <td><img src="img_db/<?php echo $product_data['image']; ?>" alt="Product Image" width="70"></td>
                     <td><?php echo $product_data['name']; ?></td>
                     <td><i class="fa-solid fa-indian-rupee-sign"></i><?php echo $row['Total_bill_price']; ?></td>
                     <td><?php echo $row['Order_date']; ?></td>
@@ -379,7 +336,6 @@ h4 {
         }
     } else {
         echo "<script> alert('No items in the cart. Please add items to your cart.'); </script>";
-        // echo "<script>window.open('home1.php','_self');</script>";
     }
     ?>
 </tbody>
@@ -387,7 +343,6 @@ h4 {
         </table>
     </section>
 
-    
     <footer class="section-p1">
     <div class="col">
     <img  class="logo"src="img/smart_galaxy.png" alt="" height=" 70px" width="200px">        <h4>
@@ -414,7 +369,6 @@ h4 {
         <a href="#">Policys</a>
         <a href="#">Information</a>
         <a href="#">Contact Us</a>
-
     </div>
     <div class="col">
         <h4>My Account</h4>
@@ -423,7 +377,6 @@ h4 {
         <a href="#">My Wishlist</a>
         <a href="#">Track My Order</a>
         <a href="#">Contact Us</a>
-
     </div>
     <div class="col install">
         <h4>Install Apps</h4>
@@ -433,7 +386,6 @@ h4 {
        <p>From App store or Google Play store</p>
        <img src="img/mastercard.png" alt="#" height="75px" width="160px">
        </div>
-
     </div>
    
     <div class="copyright">
@@ -441,4 +393,4 @@ h4 {
     </div>
     </footer>
 </body>
-</html>
+</html> 
