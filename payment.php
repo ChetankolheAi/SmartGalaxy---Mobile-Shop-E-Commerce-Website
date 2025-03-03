@@ -788,7 +788,7 @@ h4 {
     </div>
    
     <div class="copyright">
-        <p>@ 2021,All rights reserve</p>
+        <p>@ 2025,All rights reserve</p>
     </div>
     </footer>
     <script>

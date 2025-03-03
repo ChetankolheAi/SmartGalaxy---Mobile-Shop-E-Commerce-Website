@@ -8,27 +8,7 @@ $conn1 = mysqli_connect("localhost","root","","user_cart")or die(mysqli_error())
 if(isset($_POST['add_product'])&&isset($_GET['userpass']))
 {
    
-   
-//   $id = $_POST['id'];
-//   $itemname = $_POST['itemname'];
-//   $itemprice = $_POST['itemprice'];
-// $itemprice = str_replace('$', '', $itemprice);
-//   $itemimage = $_FILES['itemimage']['name'];//$_FILES inbuild function in tkae image file input
-//   $itemimage_temp_name = $_FILES['itemimage']['tmp_name'];//temporary name of file 
-//   $itemimage_folder = 'img_db/' .$itemimage;
-//   $quantity = $_POST['itemquantity'];
 
-
-//   $insert_query=mysqli_query($conn,"insert into `products`(name,price,image,quantity) values ( '$itemname','$itemprice','$itemimage', '$quantity')")or die("insert query failed");
-//   if($insert_query)
-//   {
-//    //to move the image file to folder
-//    move_uploaded_file($itemimage_temp_name,$itemimage_folder);
-//    echo "<script type='text/javascript'> alert('inserted succesfully')</script>";
-//   }
-//   else{
-//    echo "there is some error problem";
-//   }
 $user_pass=$_GET['userpass'];
 $itemname = $_POST['itemname'];
 $itemprice = $_POST['itemprice'];
@@ -52,22 +32,7 @@ else{
 $url = "Addtocart.php?userpass=".$user_pass;
    header('Location:'. $url);
 }
-//   if(!empty($id) && !empty($itemname) && !empty($itemprice))
-//   {
-//     $query = "INSERT INTO login (id,name,price,image,quantity) VALUES ('$id', '$itemname','$itemprice','$itemimage', '$quantity')";
-//     mysqli_query($conn, $query);
-//     echo"<script type='text/javascript'> alert('Successfully Register')</script>";
 
-//   }
-//     else if(empty($itemimage)){
-//      echo "<script type='text/javascript'> alert('ima')</script>";
-//     }
-// //   if(!empty($Username) && !empty($passward) && !empty($confirmpassward)){
-// //     echo"<script type='text/javascript'> alert('Successfully Register')</script>";
-//     else{
-//         echo "<script type='text/javascript'> alert('Enter The Valid Data')</script>";
-//     }
-// }
 ?>
 <!DOCTYPE html>
 <html lang="en">

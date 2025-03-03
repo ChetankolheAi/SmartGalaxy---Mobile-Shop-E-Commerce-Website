@@ -614,15 +614,10 @@ input[type="text"] {
                 <h2 id="6/256"><span>-<?php echo  $total_discount2 ?>% </span>₹<?php echo $row['price2']?></h2>
                 <h6 id="mrp2">MRP: ₹<?php echo $row['MRP2']?></h6>
 
-                <!-- <h2 id="8/256"><span>-24% </span>₹72,900</h2>
-                <h6 id="mrp3">MRP: ₹89,900</h6> -->
+        
             </div>
             
-            <!-- <select name="size" id="">
-                <option id="6/128">(6GB/128GB)</option>
-                <option id="6/256" onclick="changeDescription()">(6GB/256GB)</option>
-                <option id="8/256">(8GB/256GB)</option>
-            </select><br> -->
+          
             <div class="size">
             <h4>Select Size :</h4>
             <table>

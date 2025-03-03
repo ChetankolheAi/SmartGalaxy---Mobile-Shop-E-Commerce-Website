@@ -2,18 +2,15 @@
 session_start();
 include("demo.php");
 
-$che = "ok"; // Assuming you intend to search for usernames equal to "ok"
-echo "ok"; // This line is for debugging purposes; you can remove it once everything is working
+$che = "ok"; 
+echo "ok"; 
 
 // Corrected SQL query with proper variable usage
 $result = mysqli_query($conn, "SELECT * FROM `login` WHERE `username`='$che'");
 $row_count = mysqli_num_rows($result);
 
 if ($row_count > 0) {
-    echo "$row_count"; // Output the number of rows found (for debugging)
-    // Here you might want to handle the case where the username 'ok' already exists
-    // For example, you could redirect the user back to the registration page
-    // echo "<script>window.open('register.php','_self')</script>";
+    echo "$row_count"; 
 } else {
     echo "ok"; // This will execute if no rows are found with username 'ok'
 }

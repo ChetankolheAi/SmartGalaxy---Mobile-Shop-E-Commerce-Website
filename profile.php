@@ -654,7 +654,7 @@ h4 {
                     <div class="offers">
                         <h6><strong> Partner Offers: </strong> Get GST invoice and save up to 28% on business purchases. Sign up for free Details</h6>                        
                         <h6><strong> Partner Offers: </strong> Get GST invoice and save up to 28% on business purchases. Sign up for free Details</h6>                        
-                        <h6><strong> Partner Offers: </strong> Get GST invoice and save up to 28% on business purchases. Sign up for free Details</h6>                        
+                        <h6><strong> Partner OFfers: </strong> Get GST invoice and save up to 28% on business purchases. Sign up for free Details</h6>                        
                         <h6><strong> Partner Offers: </strong> Get GST invoice and save up to 28% on business purchases. Sign up for free Details</h6>                        
                         <h6><strong> Partner Offers: </strong> Get GST invoice and save up to 28% on business purchases. Sign up for free Details</h6>                        
                         <h6><strong> Partner Offers: </strong> Get GST invoice and save up to 28% on business purchases. Sign up for free Details</h6>                        

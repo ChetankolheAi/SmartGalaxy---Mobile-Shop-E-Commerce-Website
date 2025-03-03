@@ -200,7 +200,7 @@ body {
       document.querySelector('.overlay').classList.add('fade-out');
       setTimeout(() => {
         window.location.href = 'orders.php'; // Redirect to homepage or another page
-      }, 500); // Match the fade-out duration
+      }, 500); 
     }
   </script>
 </body>

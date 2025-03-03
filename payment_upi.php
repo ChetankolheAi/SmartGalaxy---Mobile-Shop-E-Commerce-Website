@@ -20,8 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $itemimage = $_FILES['itemimage']['name'];
         $itemimage_temp_name = $_FILES['itemimage']['tmp_name'];
         $itemimage_folder = 'img_db/' . $itemimage;
-        // echo "$itemimage";
-        // Move the uploaded file to the target directory
+       
         if (move_uploaded_file($itemimage_temp_name, $itemimage_folder)) {
             echo "<script> alert('Screenshot Uploaded Succesfully Place Order now')</script>";
       

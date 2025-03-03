@@ -60,7 +60,7 @@
     ?>
 
     <div class="Home1">
-       <h1>"Discover Your Perfect Mobile Companion."</h1>
+       <h1>"Discover Your Perfect Mobile CompanioN."</h1>
     </div>
 
     

@@ -426,10 +426,7 @@ h4 {
                 <td>CGST 12%</td>
                 <td id="cgst">₹ <?php echo $sub ?></td>
             </tr>
-            <!-- <tr>
-                <td>SGST 12%</td>
-                <td id="sgst">$191.76</td>
-            </tr> -->
+          
             <tr>
                 <td><strong>Total</strong></td>
                 <td><strong id="cart-total">₹ <?php echo $subtotal_gst ?></strong></td>

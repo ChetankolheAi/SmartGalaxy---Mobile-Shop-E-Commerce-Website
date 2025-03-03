@@ -16,15 +16,6 @@ $sql = "CREATE TABLE `$user_pass` (
     PRIMARY KEY (`itemid`)
 )";
 $result = mysqli_query($conn1 , $sql);
-// if($result){
-   
-//     header('location:home1.php');
-   
-// }
-// else{
-//    echo "no";
-//    header('location:home1.php');
-// }
 
 }
 ?>

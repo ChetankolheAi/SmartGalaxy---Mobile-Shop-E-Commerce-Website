@@ -21,7 +21,7 @@ if(isset($_GET['deleteorder'])){
     
     $delete_query=mysqli_query($conn ,"Delete from `orders` where orderID='$orderid'") or die("Query failed");
     if($delete_query){
-        echo "product deleted";
+        echo "Product deleted";
         header('location:orders.php');
     }
     else{

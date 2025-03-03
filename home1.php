@@ -473,7 +473,7 @@ $no =$no+1;
       </section>
       <section id="Product" class="Section-p1">
         <h1>Shop Galaxy !</h1>
-        <!-- <h5>New innovation nd launch just for you</h5> -->
+     
         <div class="pro-container">
         <?php
             $conn = mysqli_connect("localhost","root","1234","chetanlogin")or die(mysqli_error());

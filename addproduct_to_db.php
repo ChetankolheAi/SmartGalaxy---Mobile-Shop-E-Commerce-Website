@@ -73,7 +73,7 @@ if(mysqli_num_rows($display_product)>0){
                }
                else{
                   echo"<script> alert('there is some error in input try again later')</script>";
-                  //  echo "<script>window.open('Addtocart.php','_self')</script>";
+                   echo "<script>window.open('Addtocart.php','_self')</script>";
                 }
             
          }

@@ -23,7 +23,7 @@ session_start();
         echo "<p>No results found.</p>";
     }
 
-    // Clear session data after displaying results
+
     unset($_SESSION['search_results']);
     ?>
 </body>

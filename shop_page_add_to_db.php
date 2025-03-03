@@ -166,7 +166,7 @@ $itemprice = str_replace('$', '', $itemprice);
 <section id="add_product">
     <h4>Uplode Item image</h4>
     <form action="" class="add_product" method="post" enctype="multipart/form-data">
-         <!-- <input class="text_input" type="text" placeholder="Enter Item ID" name="id"> -->
+     
          <input class="text_input"  type="text" placeholder="Enter Item Name" name="itemname">
          <input class="text_input"  type="text" placeholder="Enter Item brand" name="itemBrand">
          <input class="text_input"  type="text" placeholder="Enter operating system" name="itemos">

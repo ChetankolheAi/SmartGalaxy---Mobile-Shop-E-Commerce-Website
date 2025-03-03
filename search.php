@@ -1,7 +1,7 @@
 <?php
-// Database connection parameters
+
 include('demo.php');
-// Get the search query from the form
+
 if(isset($_POST['query'])){
     echo $search=$_POST['query'];
 

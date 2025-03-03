@@ -288,7 +288,7 @@ h4 {
     </header>
     <section id="banner">
         <h4>Extra Services</h4>
-        <h2>Up to <span>65% Off</span> On Samsungs Mobiles</h2>
+        <h2>Up to <span>65% Off</span> On Samsung Mobiles</h2>
         <button>Explore More</button>
     </section>
 
