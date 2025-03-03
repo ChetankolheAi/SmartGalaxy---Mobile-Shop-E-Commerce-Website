@@ -67,6 +67,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     background-position: center;
     background-size: 90pc;
     background-color: rgb(255, 255, 255);
+    background: linear-gradient(rgb(255, 255, 255),rgb(0, 218, 44)), url('https://images.unsplash.com/photo-1612838320302-4b3b3b3b3b3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
   
   }
   .wrapper {
@@ -80,7 +81,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     font-family: 'Courier New', Courier, monospace;
     z-index: 10;
     align-items: right;
-    background-color: rgb(54, 91, 56);
+    background-color: rgb(34, 128, 39);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   .wrapper h1{
@@ -189,7 +190,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
       </form>
 
      </div>
-
+     <?php
+    include("footer.php");
+    ?>
     
 </body>
 </html>

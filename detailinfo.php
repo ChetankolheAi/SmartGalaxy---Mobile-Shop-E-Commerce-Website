@@ -384,8 +384,8 @@ footer .copyright{
 }
 
 #prodetails .single-pro-details  h4{
-    display: flex; /* Use flexbox */
-  justify-content: space-between; /* Distribute items evenly with space between them */
+    display: flex; 
+  justify-content: space-between; 
   align-items: center; 
 cursor: pointer;
   margin: 0; 
@@ -479,10 +479,7 @@ h4 {
     font-size: 30px;
     line-height: 44px;
 }
-        /* #hero{
-            padding: 0 20px;
-            background-position: 
-        } */
+        
          #prodetails{
             display: flex;
             flex-direction: column;
@@ -526,8 +523,8 @@ h4 {
     }
 
     h2 {
-    display: flex; /* Example: Using flexbox for layout */
-    align-items: center; /* Center align items vertically */
+    display: flex; 
+    align-items: center; 
 }
 
 input[type="text"] {
@@ -537,7 +534,7 @@ input[type="text"] {
     font-weight: inherit;
     color: inherit;
     outline: none;
-    /* Additional styling as needed */
+ 
 }
 .pro .cart i{
     color: green;
@@ -684,19 +681,7 @@ input[type="text"] {
     echo "no";
 }
  ?>
-            <!-- <span>
-            Brand	Apple<br>
-            Operating System : iOS 14<br>
-            Memory Storage Capacity	: 128 GB<br>
-            Screen Size	: 6.1 Inches<br>
-            Resolution : 4K<br>
-
-            About this item
-            <h5>1. 5 cm (6.1-inch) Super Retina XDR display<br>
-            2. Cinematic mode adds shallow depth of field and shifts focus automatically in your videos<br>
-            3. Advanced dual-camera system with 12MP Wide and Ultra Wide cameras; Photographic Styles, Smart HDR 4, Night mode, 4K Dolby Vision HDR recording<br>
-            4. 12MP TrueDepth front camera with Night mode, 4K Dolby Vision HDR recording<br>
-            5.A15 Bionic chip for lightning-fast performance<br></h5></span> -->
+           
         </div>
     </section>
 
@@ -756,214 +741,132 @@ $no =$no+1;
     </div>
       </section>
       <div id="section4"></div>
-   <footer class="section-p1">
-    <div class="col">
-    <img  class="logo"src="img/smart_galaxy.png" alt="" height=" 70px" width="200px">        <h4>
-            Contact
-        </h4>
-        <p><strong>Address:</strong>xxxxxxxxxxxxxxxx</p>
-        <p><strong>Phone:</strong>xxxxxxxxxxxxx</p>
-        <p><strong>Email:</strong>xxxxxx</p>
-        <div class="follow">
-            <h4>Follow us on</h4>
-            <div class="icon">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-pinterest-p"></i>
-                <i class="fab fa-youtube"></i>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <h4>About</h4>
-        <a href="#">About Us</a>
-        <a href="#">Terms & Condition</a>
-        <a href="#">Policys</a>
-        <a href="#">Information</a>
-        <a href="#">Contact Us</a>
+      <?php
+    include("footer.php");
+    ?>
+   <script>
+    var MainImg = document.getElementById("MainImg");
+    var smallimg = document.getElementsByClassName("small-img");
+    var Price1 = document.getElementById("6/128");
+    var Price2 = document.getElementById("6/256");
+    var Price3 = document.getElementById("8/256");
+    var Price11 = document.getElementById("mrp1");
+    var Price22 = document.getElementById("mrp2");
+    var Price33 = document.getElementById("mrp3");
+    var activeImageName = "";
+    const imageNameElement = document.getElementById("imageName");
 
-    </div>
-    <div class="col">
-        <h4>My Account</h4>
-        <a href="#">Sign in</a>
-        <a href="#">View cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track My Order</a>
-        <a href="#">Contact Us</a>
+    function updateActiveImageName() {
+        activeImageName = MainImg.src;
+        console.log("Active Image Name:", activeImageName);
+        const fileName = activeImageName.substring(activeImageName.lastIndexOf('/') + 1);
+        imageNameElement.textContent = fileName;
+    }
+    document.addEventListener('DOMContentLoaded', updateActiveImageName);
 
-    </div>
-    <div class="col install">
-        <h4>Install Apps</h4>
-       <p>From App store or Google Play store</p>
-       <div class="row">
-            <img src="img/appstore.jpg" alt="#" height=" 110px" >
-       <p>From App store or Google Play store</p>
-       <img src="img/mastercard.png" alt="#" height="75px" width="160px">
-       </div>
+    smallimg[0].onclick = function() {
+        MainImg.src = smallimg[0].src;
+        imageName = smallimg[0].src;
+        updateActiveImageName();
+    }
 
-    </div>
-   
-    <div class="copyright">
-        <p>@ 2021,All rights reserve</p>
-    </div>
-    </footer>
-    <script>
-        var MainImg = document.getElementById("MainImg");
-        var smallimg = document.getElementsByClassName("small-img");
-        var Price1 = document.getElementById("6/128");
-        var Price2 = document.getElementById("6/256");
-        var Price3 = document.getElementById("8/256");
-        var Price11 = document.getElementById("mrp1");
-        var Price22 = document.getElementById("mrp2");
-        var Price33 = document.getElementById("mrp3");
-        var activeImageName = "";
-        const imageNameElement = document.getElementById("imageName");
-       
-        function updateActiveImageName() {
-                activeImageName = MainImg.src; // Store the src of the active main image
-                console.log("Active Image Name:", activeImageName);
-                const fileName = activeImageName.substring(activeImageName.lastIndexOf('/') + 1);
-                imageNameElement.textContent =fileName; // Optional: log the active image name
-        }
-        document.addEventListener('DOMContentLoaded', updateActiveImageName);
-        var imageName = "";
+    smallimg[1].onclick = function() {
+        MainImg.src = smallimg[1].src;
+        imageName = smallimg[1].src;
+        updateActiveImageName();
+    }
 
-        smallimg[0].onclick = function(){
-            MainImg.src = smallimg[0].src;
-            imageName = smallimg[0].src; // Store the image name
-            updateActiveImageName();
-        }
+    smallimg[2].onclick = function() {
+        MainImg.src = smallimg[2].src;
+        imageName = smallimg[2].src;
+        updateActiveImageName();
+    }
 
-        smallimg[1].onclick = function(){
-            MainImg.src = smallimg[1].src;
-            imageName = smallimg[1].src; // Store the image name
-            updateActiveImageName();
-        }
-
-        smallimg[2].onclick = function(){
-            MainImg.src = smallimg[2].src;
-            imageName = smallimg[2].src; // Store the image name
-            updateActiveImageName();
-        }
-
-        smallimg[3].onclick = function(){
-            MainImg.src = smallimg[3].src;
-            imageName = smallimg[3].src; // Store the image name
-            updateActiveImageName();
-        }
-
-
-        // Create an XMLHttpRequest object
-
-
+    smallimg[3].onclick = function() {
+        MainImg.src = smallimg[3].src;
+        imageName = smallimg[3].src;
+        updateActiveImageName();
+    }
 
     function changeDescription() {
-    var newDescription = Price1.outerHTML;
-    var newDescription1 = Price11.outerHTML;
+        var newDescription = Price1.outerHTML;
+        var newDescription1 = Price11.outerHTML;
 
-    var h2ProductDescription = document.getElementById("Main-price");
-    var h2ProductDescription1 = document.getElementById("Main-mrp");
+        var h2ProductDescription = document.getElementById("Main-price");
+        var h2ProductDescription1 = document.getElementById("Main-mrp");
 
-    h2ProductDescription.innerHTML = newDescription;
-    h2ProductDescription1.innerHTML = newDescription1;
-}
-function changeDescription1() {
-    var newDescription = Price2.outerHTML;
-    var newDescription2 = Price22.outerHTML;
-  
-    var h2ProductDescription = document.getElementById("Main-price");
-    var h2ProductDescription2 = document.getElementById("Main-mrp");
-
-    h2ProductDescription.innerHTML = newDescription;
-    h2ProductDescription2.innerHTML = newDescription2;
-
-}  function changeDescription2() {
-    // Get the outer HTML of Price3
-    var newContent = Price3.outerHTML;
-    var newContent3 = Price33.outerHTML;
-
-    // Select the target element by its ID
-    var h2ProductDescription = document.getElementById("Main-price");
-    var h2ProductDescription3 = document.getElementById("Main-mrp");
-
-    // Set the inner HTML of the target element to the new content
-    h2ProductDescription.innerHTML = newContent;
-    h2ProductDescription3.innerHTML = newContent3;
-}
-
-
-let activeElement = document.querySelector('.clickable.active'); // To keep track of the currently active element
-let previousContent = ""; // Variable to store the HTML content of the previous active element
-let currentContent = "";  // Variable to store the HTML content of the currently active element
-const storage_choice = document.getElementById("CHETAN");
-
-// Initialize default active content when the page loads
-document.addEventListener('DOMContentLoaded', initializeDefaultActiveContent);
-function initializeDefaultActiveContent() {
-    // Find the element with class 'clickable active'
-    const defaultActiveElement = document.querySelector('.clickable.active');
-    if (defaultActiveElement) {
-        // Set currentContent to the HTML content of this element
-        currentContent = defaultActiveElement.innerHTML;
-        storage_choice.textContent =currentContent;
-        // Set activeElement to this element
-        activeElement = defaultActiveElement;
-    }
-}
-function changeColor(element) {
-    // Remove 'active' class from the currently active element (if any)
-    if (activeElement) {
-        previousContent = activeElement.innerHTML; // Store the HTML content of the previous active element
-        activeElement.classList.remove('active');
+        h2ProductDescription.innerHTML = newDescription;
+        h2ProductDescription1.innerHTML = newDescription1;
     }
 
-    // Add 'active' class to the clicked element
-    element.classList.add('active');
+    function changeDescription1() {
+        var newDescription = Price2.outerHTML;
+        var newDescription2 = Price22.outerHTML;
 
-    // Update activeElement to the currently clicked element
-    activeElement = element;
+        var h2ProductDescription = document.getElementById("Main-price");
+        var h2ProductDescription2 = document.getElementById("Main-mrp");
 
-    // Store the HTML content of the currently active element
-    currentContent = activeElement.innerHTML;
+        h2ProductDescription.innerHTML = newDescription;
+        h2ProductDescription2.innerHTML = newDescription2;
+    }
 
-    //giving this value to php code on top side of the page
-    storage_choice.textContent =currentContent;
-   
-}
+    function changeDescription2() {
+        var newContent = Price3.outerHTML;
+        var newContent3 = Price33.outerHTML;
 
-        //add to cart
-        var iphone = document.getElementById(" Main-price");
-       
-        // Select the Add to Cart button
-var addToCartButton = document.getElementById("iphone");
-var copycontent = addToCartButton.textContentl;
+        var h2ProductDescription = document.getElementById("Main-price");
+        var h2ProductDescription3 = document.getElementById("Main-mrp");
 
-// Add click event listener
-addToCartButton.addEventListener("click", function() {
-    // Prepare data to send
-    var productDetails = {
-        name: copycontent ,
-        price: "52,900",
-        quantity: 1
-        // Add more details as needed
-    };
+        h2ProductDescription.innerHTML = newContent;
+        h2ProductDescription3.innerHTML = newContent3;
+    }
 
-    // Send POST request to addToCart.php
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "addToCart.php", true);
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            // Handle response if needed
-            console.log(xhr.responseText);
+    let activeElement = document.querySelector('.clickable.active');
+    let previousContent = "";
+    let currentContent = "";
+    const storage_choice = document.getElementById("CHETAN");
+
+    document.addEventListener('DOMContentLoaded', initializeDefaultActiveContent);
+    function initializeDefaultActiveContent() {
+        const defaultActiveElement = document.querySelector('.clickable.active');
+        if (defaultActiveElement) {
+            currentContent = defaultActiveElement.innerHTML;
+            storage_choice.textContent = currentContent;
+            activeElement = defaultActiveElement;
         }
-    };
-    xhr.send(JSON.stringify(productDetails));
-});
+    }
 
-    </script>
+    function changeColor(element) {
+        if (activeElement) {
+            previousContent = activeElement.innerHTML;
+            activeElement.classList.remove('active');
+        }
+        element.classList.add('active');
+        activeElement = element;
+        currentContent = activeElement.innerHTML;
+        storage_choice.textContent = currentContent;
+    }
 
-    
-</body>
-</html>
+    var iphone = document.getElementById("Main-price");
+
+    var addToCartButton = document.getElementById("iphone");
+    var copycontent = addToCartButton.textContent;
+
+    addToCartButton.addEventListener("click", function() {
+        var productDetails = {
+            name: copycontent,
+            price: "52,900",
+            quantity: 1
+        };
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "addToCart.php", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log(xhr.responseText);
+            }
+        };
+        xhr.send(JSON.stringify(productDetails));
+    });
+</script>

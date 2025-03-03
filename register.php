@@ -268,7 +268,9 @@ font-family: Georgia, 'Times New Roman', Times, serif;
       Submit</button>
     </form>
 </div>
-
+<?php
+    include("footer.php");
+    ?>
     
 
 </body>

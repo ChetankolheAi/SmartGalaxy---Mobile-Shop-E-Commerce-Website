@@ -1,16 +1,9 @@
-<?php
-include('demo.php');
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="home1.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
     html{
     scroll-behavior: smooth;
@@ -27,7 +20,9 @@ body{
     box-sizing: border-box;
     font-family: 'Spartan', sans-serif;
 }
-
+.star i{
+    color: gold;
+}
  p {
     font-size: 16px;
 
@@ -137,17 +132,6 @@ body{
   right: 10px;
   bottom: 20px;
   }
-  #Product .pro .cart:hover{
-    width: 45px;
-    height: 45px;
-  background-color: #b8e2be;
-  font-weight: 500;
-  color: #088178;
-  border: 2px solid #cce7d0;
-   position: absolute;
-  right: 10px;
-  bottom: 20px;
-  }
 #Product h1 {
     color: black;
     padding: 30px ; 
@@ -160,13 +144,16 @@ body{
     color: black;
     font-family: "Courier New", Courier, monospace;
 }
-  
-
-
-
-  
   #Product .pro .cart:hover{
-    color: #088108;
+    width: 45px;
+    height: 45px;
+  background-color: #b8e2be;
+  font-weight: 500;
+  color: #088178;
+  border: 2px solid #cce7d0;
+   position: absolute;
+  right: 10px;
+  bottom: 20px;
   }
   #Product .Section-p1{
     font-size:20px;
@@ -203,6 +190,10 @@ body{
 }
 #banner h4{
     color: white;
+}
+#banner button:hover{
+
+border-color: white;
 }
 footer{
     display: flex;
@@ -289,6 +280,10 @@ footer .copyright{
     height: 40px;
     border-radius: 12px;
     border-color:#368576; ;
+}
+#hero button:hover{
+
+    border-color:white ;
 }
 @media (max-width:799px) {
    
@@ -378,84 +373,71 @@ h4 {
 }
     
 }
-#margin{
-    margin-top: 50px;
-}
-#banner {
-    margin-top: 60px;
-}
-.star i {
-    color: gold;
-}
-.cart i{
+.pro .cart i{
     color: green;
 }
-
+.des i{
+    color: green;
+}
+.star i{
+    color: gold;
+}
 </style>
    
 </head>
 <body>
-  
-    <header>
-    
-    <?php
-    include("Navbar.php");
-    ?>
-    </header>
-
-    <section id="banner">
-        <h4>Extra Services</h4>
-        <h2>Up to <span>65% Off</span>
-         On Samsungs Mobiles</h2>
-         <button>Explore More</button>
-    </section>
-    <!-- <div id="section2"> -->
-        <section id="Product" class="Section-p1">
-      <!-- <p>new features</p> -->
-            <div class="pro-container">
-            <?php
-            $conn = mysqli_connect("localhost","root","1234","chetanlogin")or die(mysqli_error());
-            $name="samsung";
-        $display = mysqli_query($conn, "SELECT * FROM `shopnow` WHERE `name` LIKE '%$name%'");
-        $no =1;
-        if(mysqli_num_rows($display)>0){
-            
-             while($row = mysqli_fetch_assoc($display)){
-            ?> 
-                <div class="pro" onclick="window.location.href='detailinfo.php?itemid= <?php echo $row['id']?>'">
-                    <img src="img_db/<?php echo $row['image']?>" alt="#">
-                    <div class="des">
-                        <span><?php echo $row['brandname']?></span>
-                        <h5> <?php echo $row['name']?><br><?php echo $row['storage']?></h5>
-                        <div class="star">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                
-                        </div>
-                        <h5><i class="fa-solid fa-indian-rupee-sign"></i><?php echo $row['price']?></h5>
-                    </div>
-                    <a href="addproduct_to_db.php?itemid= <?php echo $row['id']?>"><button class="cart"><i class="fa-solid fa-cart-shopping"></i></button></a>
-                
-                </div>
-                <?php
-
-$no =$no+1;
-            }
-            }else{
-                echo "no";
-            }
-       ;
-        
-             ?>
+<footer class="section-p1">
+    <div class="col">
+        <img  class="logo"src="img/smart_galaxy.png" alt="" height=" 70px" width="200px">
+        <h4>
+            Contact
+        </h4>
+        <p><strong>Address:</strong>xxxxxxxxxxxxxxxx</p>
+        <p><strong>Phone:</strong>xxxxxxxxxxxxx</p>
+        <p><strong>Email:</strong>xxxxxx</p>
+        <div class="follow">
+            <h4>Follow us on</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
             </div>
-        </section>
-        <?php
-    include("footer.php");
-    ?>
-    
+        </div>
+    </div>
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Terms & Condition</a>
+        <a href="#">Policys</a>
+        <a href="#">Information</a>
+        <a href="#">Contact Us</a>
+
+    </div>
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign in</a>
+        <a href="#">View cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Contact Us</a>
+
+    </div>
+    <div class="col install">
+        <h4>Install Apps</h4>
+       <p>From App store or Google Play store</p>
+       <div class="row">
+            <img src="img/appstore.jpg" alt="#" height=" 110px" >
+       <p>From App store or Google Play store</p>
+       <img src="img/mastercard.png" alt="#" height="75px" width="160px">
+       </div>
+
+    </div>
    
+    <div class="copyright">
+        <p>@ 2025,All rights reserve</p>
+    </div>
+    </footer>
 </body>
 </html>

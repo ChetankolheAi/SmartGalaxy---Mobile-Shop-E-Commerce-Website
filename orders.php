@@ -299,8 +299,9 @@ h4 {
                     <td>Sr.no</td>
                     <td>IMAGE</td>
                     <td>PRODUCT</td>
-                    <td>PRICE</td>
                     <td>Order-Date</td>
+                    <td>Expected-Deilvery-Date</td>
+                    <td>Status</td>
                 </tr>
             </thead>
             <tbody>
@@ -326,8 +327,17 @@ h4 {
                     </td>
                     <td><img src="img_db/<?php echo $product_data['image']; ?>" alt="Product Image" width="70"></td>
                     <td><?php echo $product_data['name']; ?></td>
-                    <td><i class="fa-solid fa-indian-rupee-sign"></i><?php echo $row['Total_bill_price']; ?></td>
                     <td><?php echo $row['Order_date']; ?></td>
+
+                    <?php
+                    
+                    $orderDate = $row['Order_date'];
+                    $expectedDeliveryDate = date('Y-m-d', strtotime($orderDate . ' + 8 days'));
+                    ?>
+
+                    <td><?php echo $expectedDeliveryDate; ?></td>
+                    <td><?php echo $row['Status']; ?></td>
+
                 </tr>
     <?php
             } else {
@@ -343,54 +353,8 @@ h4 {
         </table>
     </section>
 
-    <footer class="section-p1">
-    <div class="col">
-    <img  class="logo"src="img/smart_galaxy.png" alt="" height=" 70px" width="200px">        <h4>
-            Contact
-        </h4>
-        <p><strong>Address:</strong>xxxxxxxxxxxxxxxx</p>
-        <p><strong>Phone:</strong>xxxxxxxxxxxxx</p>
-        <p><strong>Email:</strong>xxxxxx</p>
-        <div class="follow">
-            <h4>Follow us on</h4>
-            <div class="icon">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-pinterest-p"></i>
-                <i class="fab fa-youtube"></i>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <h4>About</h4>
-        <a href="#">About Us</a>
-        <a href="#">Terms & Condition</a>
-        <a href="#">Policys</a>
-        <a href="#">Information</a>
-        <a href="#">Contact Us</a>
-    </div>
-    <div class="col">
-        <h4>My Account</h4>
-        <a href="#">Sign in</a>
-        <a href="#">View cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track My Order</a>
-        <a href="#">Contact Us</a>
-    </div>
-    <div class="col install">
-        <h4>Install Apps</h4>
-       <p>From App store or Google Play store</p>
-       <div class="row">
-            <img src="img/appstore.jpg" alt="#" height=" 110px" >
-       <p>From App store or Google Play store</p>
-       <img src="img/mastercard.png" alt="#" height="75px" width="160px">
-       </div>
-    </div>
-   
-    <div class="copyright">
-        <p>@ 2021,All rights reserve</p>
-    </div>
-    </footer>
+    <?php
+    include("footer.php");
+    ?>
 </body>
 </html> 

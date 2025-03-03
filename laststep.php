@@ -36,10 +36,10 @@ if (isset($_GET['productid'])) {
         foreach ($productIds as $id) {
             $item_count=$item_count+1;
         }
-
+        $Status="Pending";
         foreach ($productIds as $id) {
             $uid=htmlspecialchars($id);
-            $query = "INSERT INTO orders (itemids,coustumer_id,Total_bill_price,payment_ss,item_count,Order_date,Order_time) VALUES ('$uid','$coustomer_id','$total_paid','$payment_ss','$item_count','$Order_date','$Order_time')";
+            $query = "INSERT INTO orders (itemids,coustumer_id,Total_bill_price,payment_ss,item_count,Order_date,Order_time,Status) VALUES ('$uid','$coustomer_id','$total_paid','$payment_ss','$item_count','$Order_date','$Order_time','$Status')";
             $result1=mysqli_query($conn, $query);
 
            
